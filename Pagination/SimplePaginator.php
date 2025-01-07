@@ -16,7 +16,7 @@
  * @package     Lenevor
  * @subpackage  Base
  * @link        https://lenevor.com
- * @copyright   Copyright (c) 2019 - 2024 Alexander Campo <jalexcam@gmail.com>
+ * @copyright   Copyright (c) 2019 - 2025 Alexander Campo <jalexcam@gmail.com>
  * @license     https://opensource.org/licenses/BSD-3-Clause New BSD license or see https://lenevor.com/license or see /license.md
  */
 
@@ -65,14 +65,14 @@ interface SimplePaginator
      * 
      * @return int
      */
-    public function firstItem(): int;
+    public function firstItem();
 
     /**
      * Get the number of the last item in the slice.
      * 
      * @return int
      */
-    public function lastItem(): int;
+    public function lastItem();
 
     /**
      * Determine if there are enough items to split into multiple pages.
