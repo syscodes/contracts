@@ -16,15 +16,17 @@
  * @package     Lenevor
  * @subpackage  Base
  * @link        https://lenevor.com
- * @copyright   Copyright (c) 2019 - 2024 Alexander Campo <jalexcam@gmail.com>
+ * @copyright   Copyright (c) 2019 - 2025 Alexander Campo <jalexcam@gmail.com>
  * @license     https://opensource.org/licenses/BSD-3-Clause New BSD license or see https://lenevor.com/license or see /license.md
  */
 
 namespace Syscodes\Components\Contracts\Validation;
 
 use Syscodes\Components\Validation\Rules;
-use Syscodes\Components\Validation\Validation;
 
+/**
+ * Get validator.
+ */
 interface Validator
 {
     /**
@@ -45,6 +47,20 @@ interface Validator
      * @return void
      */
     public function setValidator(string $key, Rules $rule): void;
+
+    /**
+     * An alternative more semantic shortcut to the message container.
+     *
+     * @return \Syscodes\Compoenents\Support\MessageBag
+     */
+    public function errors();
+
+    /**
+     * Determine if the data fails the validation rules.
+     * 
+     * @return bool
+     */
+    public function fails();
 
     /**
      * Validate the given data against the provided rules.
