@@ -16,7 +16,7 @@
  * @package     Lenevor
  * @subpackage  Base
  * @link        https://lenevor.com
- * @copyright   Copyright (c) 2019 - 2024 Alexander Campo <jalexcam@gmail.com>
+ * @copyright   Copyright (c) 2019 - 2025 Alexander Campo <jalexcam@gmail.com>
  * @license     https://opensource.org/licenses/BSD-3-Clause New BSD license or see https://lenevor.com/license or see /license.md
  */
 
@@ -38,7 +38,7 @@ interface InputOption
      * 
      * @return mixed
      */
-    public function getDefault();
+    public function getDefault(): mixed;
     
     /**
      * Sets the default value.
@@ -88,7 +88,7 @@ interface InputOption
      * 
      * @return string|array|null  The shortcut
      */
-    public function getShortcut();
+    public function getShortcut(): ?string;
 
     /**
      * Sets the option shortcut.
